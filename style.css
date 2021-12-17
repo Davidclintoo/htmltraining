@@ -1,0 +1,26 @@
+body{background-color: red;}
+form{background-color:white ;
+    width: 80%;
+    padding-top: 20px;
+    padding-bottom:40px ;
+    border-radius:5% ;
+}
+input{display: block; 
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  margin-bottom: 20px;
+  }
+
+
+#redbutton {background-color: red;
+  width: 50%;
+  color: green;
+  padding:  10px;
+  
+  border-radius: 10px;
+  margin:auto;
+  display: block;
+}
+  
+h1{text-align:center ;}
