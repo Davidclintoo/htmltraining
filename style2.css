@@ -1,8 +1,7 @@
-body{color:hsl(257, 40%, 49%);
-  background-image:url("./bg-desktop.svg");
-}
- 
-
+body{background-color:hsl(257, 40%, 49%);
+    background-image:url("./bg-desktop.svg");
+  }
+    
 
 
 button{
@@ -16,7 +15,7 @@ button{
     border-color:transparent ;
 }
 
-p,h2{
+p,h2,h1{
     color: white;
 }
 
