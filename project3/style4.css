@@ -26,7 +26,7 @@ p{
    opacity: 40%;
 }
 .card{
-   
+   height: 200px;
    width: 300px;
    
    border-radius: 5px;
