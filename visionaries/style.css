@@ -4,19 +4,19 @@
 
 
 }
-.main{width: 100%;
+.main{max-width:120rem;
 background:linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(./amazing-animal-beautiful-beautifull.jpg) ;
 background-position:center ;
 background-size: cover;
-height:100vh ;
+min-height: 50rem;
 
 }
 
-.navbar{width:1200px ;
+.navbar{width:80px ;
     height:75px ;
     margin: auto;
 }
-.icon{width:200px ;
+.icon{width:75px ;
     float: left;
     height:70px ;
 }
@@ -27,6 +27,7 @@ height:100vh ;
     padding-left:20px ;
     float: left;
     padding-top:10px ;
+    
 }
 .menu{
     width:400px ;
@@ -62,14 +63,14 @@ ul li a:hover{
 
 .srch{
     font-family:  'Times New Roman';
-    width: 200px;
+    max-width:40rem ;
     height: 40px;
     background: transparent;
     border:1px solid #ff7200;
     margin-top: 13px;
     color: white;
     border-right:none ;
-    font-size:16px ;
+    font-size:1rem ;
     float: left;
     padding:10px ;
     border-bottom-left-radius:5px ;
@@ -84,7 +85,7 @@ ul li a:hover{
     border: 2px solid #ff7200;
     margin-top:13px ;
     color:white ;
-    font-size:15px ;
+    font-size:1rem ;
     border-bottom-right-radius:5px ;
     border-bottom-right-radius:5px ;
     
@@ -97,11 +98,13 @@ ul li a:hover{
     outline:none ;
 }
 .content{
-    width: 1200px;
+    max-width: 150rem;
     height: auto;
     margin: auto;
     color: white;
     position: relative;
+    
+    
 }
 .content .par{
     padding-left:20px ;
@@ -109,11 +112,12 @@ ul li a:hover{
     font-family:Arial;
     letter-spacing:1.2px ;
     line-height:30px ;
+    font-size: calc( 3rem, 1rem+10vw, 7rem); 
 }
 .content .h1{
     font-family: 'Times New Roman';
-    font-size: 50px;
-    padding-left: 20px;
+    font-family: calc(3rem,1rem+10vw, 7rem);
+    padding-left: 50px;
     margin-top:50px ;
 }
 .content .cn{
@@ -140,7 +144,6 @@ ul li a:hover{
     width:250px ;
     height: 420px;
     background:linear-gradient(to top ,rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%) ;
-    
     top: -20px;
     left:870px ;
     border-radius:10px ;
@@ -248,24 +251,8 @@ ul li a:hover{
 
 }
 
-@media only screen and (max-width:520px){
-    .search{
-        width:40%;
-        display: block;
 
-        
-    }
-    .form{
-        display: block;
-        float: right;
-        margin-right:100px ;
-        position:absolute;
-        
-    }
-.main{
-    display: block;
-}
-}
+
 .lower{width: 98.8%;
     background:linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(./pexels-photo-1913226.jpeg) ;
     background-position:center ;
