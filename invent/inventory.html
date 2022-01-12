@@ -46,20 +46,25 @@
       <div class="container mt-5" >
         <div class="row">
           <div class="col-3">
-            <ul class="list-group">
-                <li class="list-group-item">
+            <ul   class="list-group">
+                <li style="background-color:black ; border-radius:5% ;" class="list-group-item">
                   <!-- avatar -->
                 <!-- <img src="/static/images/stock.jpg" class="rounded float-left mr-3" alt="Dashboard Avatar" width="50px" height="30px"> -->
                 <!-- heading -->
-                <h3><i class="fa fa-bars" aria-hidden="true"></i> Nav Menu</h3>
+                <h3 style="color: orangered; background-color: black; border-radius:5% ;"><i class="fa fa-bars" aria-hidden="true"></i> Nav Menu</h3>
                 </li>
-                <a href="/dashboard"><li class="list-group-item"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</li>
+                <a style="text-decoration:none ;" href="/dashboard">
+                  <li style="color: orangered; background-color: black;border-radius:5% ;" class="list-group-item"><i class="fa fa-tachometer" aria-hidden="true"></i>  Dashboard</li>
                 </a>
-                <a href="/inventories"><li class="list-group-item"><i class="fa fa-database" aria-hidden="true"></i> Inventories
+                <a style="text-decoration:none ;" href="/inventories">
+                  <li style="color: orangered; background-color: black; border-radius:5% ;" class="list-group-item"><i class="fa fa-database" aria-hidden="true"></i> Inventories
                 </li></a>
-                <a href="/sales"><li class="list-group-item"><i class="fa fa-money" aria-hidden="true"></i> Sales</li></a>
-                <a href="/stock"><li class="list-group-item"><i class="fa fa-dropbox" aria-hidden="true"></i> Stock</li></a>
-                <a href="/users"><li class="list-group-item"><i class="fa fa-user" aria-hidden="true"></i> Users</li></a>
+                <a  style="text-decoration:none ;" href="/sales">
+                  <li style="color: orangered; background-color: black; border-radius:5% ;" class="list-group-item"><i class="fa fa-money" aria-hidden="true"></i> Sales</li></a>
+                <a style="text-decoration:none ;" href="/stock">
+                  <li style="color: orangered; background-color: black; border-radius:5% ;" class="list-group-item"><i class="fa fa-dropbox" aria-hidden="true"></i> Stock</li></a>
+                <a style="text-decoration:none ; " href="/users">
+                  <li style="color: orangered; background-color: black; border-radius:5% ;" class="list-group-item"><i class="fa fa-user" aria-hidden="true"></i> Users</li></a>
               </ul>
             
           </div>
@@ -87,13 +92,24 @@
         <div class="modal-body">
             <form>
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  <label for="exampleInputName1" class="form-label">Name</label>
+                  <input type="name" class="form-control" id="exampleInputName1" >
                 </div>
                 <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
+                  <label for="exampleInputQuantity1" class="form-label">Quantity</label>
+                  <input type="Quantity" class="form-control" id="exampleInputQuantity1">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputSelectCategory1" class="form-label">Select Category</label>
+                  <input type="Select Category" class="form-control" id="exampleInputSelectCategory1">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputbuying price1" class="form-label">Buying price</label>
+                  <input type="buying price" class="form-control" id="exampleInputbuying price1">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleinputselling_price1" class="form-label">Selling price</label>
+                  <input type="Selling price" class="form-control" id="exampleinputselling_price1">
                 </div>
                 <div class="mb-3 form-check">
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -110,41 +126,59 @@
     </div>
   </div>
         
-
+  <div class="container">
     <div class="col-4">
       
     </div>
     
   </div>
 </div>
+
+
+  <div class="row">
+    <div class="col-4.5">
+      Show entities
+    </div>
+    <div class="col-4.5">
+      search
+    </div>
+    
+  </div>
+
+
+
 <div class="container">
     <div class="row">
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">ID </th>
+                <th scope="col">NAME</th>
+                <th scope="col">B.P</th>
+                <th scope="col">S.P</th>
+                <th scope="col">QUANTITY</th>
+                <th scope="col">CATEGORY</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>bag(laptop)</td>
+                <td>20000.0</td>
+                <td>25000.0</td>
+                <td>12</td>
+                <td>Quantity</td>
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
               <tr>
                 <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
+                <td colspan="2"></td>
+                <td></td>
               </tr>
             </tbody>
           </table>
