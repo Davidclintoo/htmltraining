@@ -1,205 +1,330 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>inventory</title>
-   
-  </head>
-  <body>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
-        <a class="navbar-brand" href="/">IMS</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/dashboard">Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/sales">Sales</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/inventories">Inventories</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/stock">Stock</a>
-            </li>
-            
-          </ul>
-        </div>
-      </nav>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 
-      <div class="container mt-5" >
-        <div class="row">
-          <div class="col-3">
-            <ul   class="list-group">
-                <li style="background-color:black ; border-radius:5% ;" class="list-group-item">
-                  <!-- avatar -->
-                <!-- <img src="/static/images/stock.jpg" class="rounded float-left mr-3" alt="Dashboard Avatar" width="50px" height="30px"> -->
-                <!-- heading -->
-                <h3 style="color: orangered; background-color: black; border-radius:5% ;"><i class="fa fa-bars" aria-hidden="true"></i> Nav Menu</h3>
-                </li>
-                <a style="text-decoration:none ;" href="/dashboard">
-                  <li style="color: orangered; background-color: black;border-radius:5% ;" class="list-group-item"><i class="fa fa-tachometer" aria-hidden="true"></i>  Dashboard</li>
-                </a>
-                <a style="text-decoration:none ;" href="/inventories">
-                  <li style="color: orangered; background-color: black; border-radius:5% ;" class="list-group-item"><i class="fa fa-database" aria-hidden="true"></i> Inventories
-                </li></a>
-                <a  style="text-decoration:none ;" href="/sales">
-                  <li style="color: orangered; background-color: black; border-radius:5% ;" class="list-group-item"><i class="fa fa-money" aria-hidden="true"></i> Sales</li></a>
-                <a style="text-decoration:none ;" href="/stock">
-                  <li style="color: orangered; background-color: black; border-radius:5% ;" class="list-group-item"><i class="fa fa-dropbox" aria-hidden="true"></i> Stock</li></a>
-                <a style="text-decoration:none ; " href="/users">
-                  <li style="color: orangered; background-color: black; border-radius:5% ;" class="list-group-item"><i class="fa fa-user" aria-hidden="true"></i> Users</li></a>
-              </ul>
-            
-          </div>
-          <div class="col-9">
-  <div class="row">
-    
-    <div class="col-4">
-      
-    </div>
-    <div class="col-4">
-      
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    +Add New Items
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="mb-3">
-                  <label for="exampleInputName1" class="form-label">Name</label>
-                  <input type="name" class="form-control" id="exampleInputName1" >
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputQuantity1" class="form-label">Quantity</label>
-                  <input type="Quantity" class="form-control" id="exampleInputQuantity1">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputSelectCategory1" class="form-label">Select Category</label>
-                  <input type="Select Category" class="form-control" id="exampleInputSelectCategory1">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputbuying price1" class="form-label">Buying price</label>
-                  <input type="buying price" class="form-control" id="exampleInputbuying price1">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleinputselling_price1" class="form-label">Selling price</label>
-                  <input type="Selling price" class="form-control" id="exampleinputselling_price1">
-                </div>
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+  <script>
+    $(document).ready(function () {
+      $('#invent').DataTable();
+    });
+  </script>
+  <title>inventory</title>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div style="background-color:aquamarine" class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a style="color: whitesmoke;" class="nav-link" href="#">IMS</a>
+
+          <a style="color: whitesmoke;" class="nav-link active" aria-current="page" href="home">Home</a>
+          <a style="color: whitesmoke;" class="nav-link" href="dashboard">Dashboard</a>
+          <a style="color: whitesmoke;" class="nav-link" href="sales">Sales</a>
+
+          <a style="color: whitesmoke;" class="nav-link" href="inventory">Inventory</a>
+          <a style="color: whitesmoke;" class="nav-link " href="Stock">Stock</a>
         </div>
       </div>
     </div>
-  </div>
-        
-  <div class="container">
-    <div class="col-4">
-      
-    </div>
-    
-  </div>
-</div>
-
-
-  <div class="row">
-    <div class="col-4.5">
-      Show entities
-    </div>
-    <div class="col-4.5">
-      search
-    </div>
-    
-  </div>
+  </nav>
 
 
 
-<div class="container">
+
+
+
+
+
+
+
+  <div class="container mt-5">
     <div class="row">
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">ID </th>
-                <th scope="col">NAME</th>
-                <th scope="col">B.P</th>
-                <th scope="col">S.P</th>
-                <th scope="col">QUANTITY</th>
-                <th scope="col">CATEGORY</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>bag(laptop)</td>
-                <td>20000.0</td>
-                <td>25000.0</td>
-                <td>12</td>
-                <td>Quantity</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2"></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-    </div>
-  </div>
+      <div class="col-3">
+        <ul class="list-group">
+          <li style="background-color:black ; border-radius:5% ;" class="list-group-item">
+            
+            <h3 style="color: orangered; background-color: black; border-radius:5% ;">
+              <i class="fa fa-bars" aria-hidden="true"></i> Nav Menu
+            </h3>
+          </li>
+          <a style="text-decoration:none ;" href="/dashboard">
+            <li style="color: orangered; background-color: black;border-radius:5% ;" class="list-group-item">
+              <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard
+            </li>
+          </a>
+          <a style="text-decoration:none ;" href="/inventories">
+            <li style="color: orangered; background-color: black; border-radius:5% ;" class="list-group-item">
+              <i class="fa fa-database" aria-hidden="true"></i> Inventories
+            </li>
+          </a>
+          <a style="text-decoration:none ;" href="/sales">
+            <li style="color: orangered; background-color: black; border-radius:5% ;" class="list-group-item">
+              <i class="fa fa-money" aria-hidden="true"></i> Sales
+            </li>
+          </a>
+          <a style="text-decoration:none ;" href="/stock">
+            <li style="color: orangered; background-color: black; border-radius:5% ;" class="list-group-item">
+              <i class="fa fa-dropbox" aria-hidden="true"></i> Stock
+            </li>
+          </a>
+          <a style="text-decoration:none ; " href="/users">
+            <li style="color: orangered; background-color: black; border-radius:5% ;" class="list-group-item">
+              <i class="fa fa-user" aria-hidden="true"></i> Users
+            </li>
+          </a>
+        </ul>
 
-
-
-          </div>
-          
-        </div>
       </div>
-    <!-- Optional JavaScript; choose one of the two! -->
+      <div class="col-9">
+        <div class="row">
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+          <div class="col-4">
+           
+          </div>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
-  </body>
+          
+            <div class="col-2">
+
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Add_items
+
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">add item</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="/add_items" method="POST">
+                        <div class="mb-3">
+                          <label for="exampleInputName1" class="form-label">Name</label>
+                          <input name="name" placeholder="name" class="form-control" id="exampleInputName1">
+                        </div>
+
+
+                        <div class="mb-3">
+                          <label for="exampleInputbuying price1" class="form-label">Buying price</label>
+                          <input name="bp" placeholder="buying price" class="form-control"
+                            id="exampleInputbuying price1">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleinputselling_price1" class="form-label">Selling price</label>
+                          <input name="sp" placeholder="Selling price" class="form-control"
+                            id="exampleinputselling_price1">
+                        </div>
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="col-2">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#SalesModal">
+                make sales
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="SalesModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">make sales</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                      <form action="/make_sales" , method="POST">
+                        <select name="name">
+                          {%for i in y %}
+                          <option value="{{i[0]}}">
+                            {{i[1]}}
+
+                          </option>
+
+                          {%endfor%}
+                        </select>
+                        <div class="mb-3">
+                          <label for="examplequantity1" class="form-label"></label>
+                          <input name="quantity" placeholder="quantity" class="form-control" id="exampleinputquantity1">
+                        </div><div class="mb-3">
+                          <label for="exampleproduct_id1" class="form-label"></label>
+                          <input name="product_id" type="hidden" placeholder="product_id" class="form-control" id="exampleinputproduct_id1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+            <div class="container">
+              <div class="col-4">
+
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+
+          <div class="container">
+            <div class="row">
+              <table id="invent" class="table  table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">ID </th>
+                    <th scope="col">NAME</th>
+                    <th scope="col">B.P</th>
+                    <th scope="col">S.P</th>
+                    <th scope="col">QUANTITY</th>
+                    <th scope="col">CATEGORY</th>
+                    <th scope="col">EDIT</th>
+                    <th scope="col">VIEW_SALES</th>
+                  
+
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for i in y %}
+                  <tr>
+                    <td> {{i[0]}} </td>
+                    <td> {{i[1]}} </td>
+                    <td> {{i[2]}} </td>
+                    <td> {{i[3]}} </td>
+                    <td> {{i[4]}} </td>
+                    <td> {{i[5]}} </td>
+                    <td>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal{{i[0]}}">
+                      edit
+                    </button>
+        
+                    <!-- Modal -->
+                    <div class="modal fade" id="editModal{{i[0]}}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                      aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">edit</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+        
+                            <form action="/edit" , method="post">
+                              <div class="mb-3">
+                                <label for="exampleInputbuying price1" class="form-label">id</label>
+                                <input name="id" type="hidden" placeholder="id" class="form-control"
+                                  id="exampleInputid1">
+                              <div class="mb-3">
+                                <label for="exampleInputname1" class="form-label">name</label>
+                                <input name="name" value="{{i[1]}}"  placeholder="name" class="form-control"
+                                  id="hidden">
+                              <div class="mb-3">
+                                <label for="exampleInputbuying price1" class="form-label">Buying price</label>
+                                <input name="bp" value="{{i[2]}}"  placeholder="buying price" class="form-control"
+                                  id="exampleInputbuying price1">
+                              </div> <div class="mb-3">
+                                <label for="exampleInputselling price1" class="form-label">selling_price</label>
+                                <input name="sp" value="{{i[3]}}" placeholder="buying price" class="form-control"
+                                  id="exampleInputselling price1">
+                             
+                              
+                              <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+        
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div></td>
+                <td> 
+                  <a href="/sales/{{i[0]}}">VIEW_SALES</a>
+               
+                </td>
+                  </tr>
+                  {% endfor %}
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+    <script> $(document).ready(function () {
+        $('#tables').Datatable();
+      });
+
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+
+
+
+</body>
+
 </html>
