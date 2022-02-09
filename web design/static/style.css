@@ -75,3 +75,29 @@ background:linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%) ,url(.
 #middle{
     background-color:black ;
 }
+
+#img44{
+    height: 70%;
+}
+
+
+#hp1{
+    background-color:orangered ;
+}
+
+#login{
+    color: white;
+}
+.lower{
+    margin-top:5% ;
+}
+#h45{
+    color: orangered;
+    text-align: center;
+    font-family:'Pushster', cursive  ;
+    
+}
+
+#img7{
+    width:20px ;
+}

@@ -18,7 +18,7 @@ conn=psycopg2.connect("dbname='duka' user='postgres' host='localhost' password='
 
 
 
-@app.route('/')
+@app.route('/index')
 def home():
     return  render_template("index.html") 
 
@@ -44,27 +44,32 @@ def sinup():
         second_name=request.form["second_name"],
         email=request.form["email"],
         password=request.form["password"]
-
         
         if "@" in email and "." in email :
-          msg="welcome"
+         msg="welcome"
         else:
           msg="invalid email try again "
+
+
+
+
+
+        users=[] 
+        for x in users:
+            if x.first_name==first_name and x.second_name==second_name and x.email==email and x.password==password:
+                return redirect(url_for('login')) 
+
+            else:
+        
        
         
       
-        query="INSERT INTO users( first_name, second_name, email, password )VALUES ( %s, %s, %s,%s )"
-        rows=(first_name,second_name ,email,password)
-        cur.execute=(query ,rows)
-        
-        conn.commit()
-        
-        cur.fetchall()
-        msg = 'You have successfully registered!'
-    
+                     query='INSERT INTO public.users(  first_name, second_name, email, password) VALUES (%s, %s, %s, %s);'
+                     rows=(first_name,second_name ,email,password)
+                     cur.execute(query ,rows)
+                     conn.commit()
 
-
-    return redirect(url_for("home" ,msg=msg)) 
+    return redirect(url_for("login" ,msg=msg)) 
 
 
 
