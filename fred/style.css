@@ -1,0 +1,86 @@
+body{
+background:linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%) ,url(./825522794-d7eef2eb588c2d19530a2b0e21c4804c479b83004edb31eb7d72eaa21eaf5710-d_640x360.jpg);
+    
+}
+
+
+#span1{
+    color:pink ;
+}#span2{
+    color:violet;
+}#span3{
+    color:blue ;
+}#span4{
+    color:gold;
+}#span5{
+    color:purple ;
+}#span6{
+    color:orangered;}
+
+
+
+
+#h2{
+    text-align: center;
+    color: orangered;
+    font-family:'Pushster', cursive  ;
+
+}
+#h1{
+    color: black;
+    font-family:'Pushster', cursive  ;
+    
+}
+#h4{
+    height:100% ;
+}
+
+.card{
+    margin-right: 30%;
+}
+#h8{
+    font-family:'Pushster', cursive  ;
+color: orangered;
+}
+#h8{
+    font-family:'Pushster', cursive  ;
+color: blue;
+}#h8{
+    font-family:'Pushster', cursive  ;
+color: greenyellow;
+}
+
+ #btn{
+     border-radius:5% ;
+     color:orangered ;
+     background-color:blue;
+ }
+
+ #img1{
+     height:50% ;
+ }
+ #p1{
+     color: blue;
+     text-align: center;
+     font-family:'Pushster', cursive  ;
+ }
+   
+ #p2{
+     margin-top:20% ;
+     color: aquamarine;
+     font-family:'pushster',cursive ;
+
+ }
+ #p3{
+     color: chartreuse;
+     font-family:'pushster',cursive ;
+     margin-top: 20%;
+
+ }
+
+ #p4{
+     color: crimson;
+     font-family:'pushster',cursive ;
+     margin-top: 20%;
+
+ }

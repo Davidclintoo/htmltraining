@@ -101,3 +101,10 @@ background:linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%) ,url(.
 #img7{
     width:20px ;
 }
+
+#hgallary{
+    text-align: center;
+    color: orangered;
+    font-family:'Pushster', cursive  ;
+    
+}
