@@ -16,7 +16,7 @@
 
   <script>
     $(document).ready(function () {
-      $('#example ,#examples').DataTable();
+      $('#table1 ,#table2').DataTable();
     });
   </script>
 
@@ -37,10 +37,10 @@
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link active" href="index">Home</a>
+            <a class="nav-link active" href="home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about">About</a>
+            <a class="nav-link active" href="about">About</a>
           </li>
 
 
@@ -75,7 +75,7 @@
     <div class="container 100% mt-5">
       <div class="row">
         <div class="col-12  col-xl-12 col-md-12 col-sm-12 col-xs-12   ">
-          <table id="example" class="table table-success table-striped">
+          <table id="table1" class="table table-success table-striped">
             <thead>
               <H1>Candidates of 2019</H1>
               <tr>
@@ -110,7 +110,7 @@
               <tr>
                 <th scope="row">3</th>
                 <td>Ayub</td>
-                <td>76</td>
+                <td>77</td>
                 <td>A-</td>
                 <td>Electrical and Electronic Eng</td>
                 <td>Technical University of kenya</td>
@@ -142,6 +142,22 @@
                 <td>Nursing</td>
                 <td>Meru University</td>
 
+              </tr> <tr>
+                <th scope="row">7</th>
+                <td>Joshphat</td>
+                <td>56</td>
+                <td>B-</td>
+                <td>Education</td>
+                <td>Moi University </td>
+
+              </tr> <tr>
+                <th scope="row">8</th>
+                <td>Sharon</td>
+                <td>48</td>
+                <td>C+</td>
+                <td>Art</td>
+                <td>Eldoret</td>
+
               </tr>
 
             </tbody>
@@ -154,7 +170,7 @@
       <div class="row">
         <div class="col-12 col-xl-12 col-md-12 col-sm-12 col-xs-12    ">
 
-          <table id="examples" class="table table-success table-striped ">
+          <table id="table2" class="table table-success table-striped ">
             <thead>
               <h1>Candidates Of 2020/2021</h1>
               <tr>
@@ -224,23 +240,23 @@
                 <td>Vetinary medicine</td>
                 <td>Egerton</td>
               </tr>
+              
               <tr>
                 <th scope="row">7</th>
-                <td>Morgan</td>
-                <td>72</td>
-                <td>B+</td>
-                <td>Law</td>
-                <td>Dedan kimathi</td>
-              </tr>
-              <tr>
-                <th scope="row">8</th>
                 <td>David</td>
                 <td>69</td>
                 <td>B+</td>
                 <td>Mechanical Eng</td>
                 <td>Technical University of kenya</td>
               </tr>
-
+              <tr>
+                <th scope="row">8</th>
+                <td>Morgan</td>
+                <td>67</td>
+                <td>B+</td>
+                <td>Law</td>
+                <td>Dedan kimathi</td>
+              </tr>
               <tr>
                 <th scope="row">9</th>
                 <td>William</td>
@@ -281,8 +297,16 @@
                 <td>Surveying Eng</td>
                 <td>Technical University of Kenya</td>
               </tr>
-              <tr>
+              <tr> <tr>
                 <th scope="row">14</th>
+                <td>Vida</td>
+                <td>60</td>
+                <td>B</td>
+                <td>Mechanical Eng</td>
+                <td>Eldoret</td>
+              </tr>
+              <tr>
+                <th scope="row">15</th>
                 <td>Juliet</td>
                 <td>60</td>
                 <td>B</td>
@@ -290,7 +314,7 @@
                 <td>Jomo Kenyatta University</td>
               </tr>
               <tr>
-                <th scope="row">15</th>
+                <th scope="row">16</th>
                 <td>Charls</td>
                 <td>60</td>
                 <td>B</td>
@@ -298,7 +322,7 @@
                 <td>Pwani University</td>
               </tr>
               <tr>
-                <th scope="row">16</th>
+                <th scope="row">17</th>
                 <td>Belvin</td>
                 <td>56</td>
                 <td>B-</td>
@@ -306,7 +330,16 @@
                 <td>KMTC</td>
               </tr>
               <tr>
-                <th scope="row">17</th>
+                <th scope="row">18</th>
+                <td>Sharon</td>
+                <td>56</td>
+                <td>B-</td>
+                <td>Education</td>
+                <td>Eldoret</td>
+              </tr>
+              <tr>
+              <tr>
+                <th scope="row">19</th>
                 <td>Belinda</td>
                 <td>49</td>
                 <td>c+</td>
@@ -342,12 +375,12 @@
         new Chart(document.getElementById("bar-chart"), {
             type: 'bar',
             data: {
-              labels: ["2019 (6 students)", "2020/2021 (17 students)", ],
+              labels: ["2019 (8 students)", "2020/2021 (19 students)", ],
               datasets: [
                 {
                   label: "points (% in percentage)",
                   backgroundColor: ["#3e95cd", "#8e5ea2"],
-                  data: [74.16,68.9]
+                  data: [71.16,73.9]
                 }
               ]
             },

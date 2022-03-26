@@ -8,6 +8,8 @@ import psycopg2
 import os
 import secrets
 app = Flask(__name__)
+
+
 conn=psycopg2.connect("dbname='d1m8odf2nbe0jt' user='idlxsyofckzrsu' port='5432 ' host='ec2-52-30-133-191.eu-west-1.compute.amazonaws.com' password='377cc0aab4454edd009635c4786b072f4e75ef0d07fc222ff7020a6c6d950a4a'")
 app.config['SECRET_KEY'] = 'clintoo1111david222'
 
